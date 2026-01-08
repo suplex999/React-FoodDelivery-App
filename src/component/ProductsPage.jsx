@@ -1,9 +1,7 @@
 // ProductsPage.jsx
 import React, { useState, useMemo, useContext } from "react";
-import { ShopContext } from "./ShopContext";
+import { ShopContext } from "./Shopcontext";
 import { Link } from "react-router-dom";
-
-
 
 
 

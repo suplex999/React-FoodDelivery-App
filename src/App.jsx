@@ -13,7 +13,8 @@ import SignUpSection from './component/Signup'
 import ProductList from './component/ProductList'
 import Contact from './component/Contact'
 import ProductsPage from './component/ProductsPage'
-
+import { Navigate } from 'react-router-dom'
+import OrderSuccess from './component/OrderSuccess'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,13 +31,16 @@ function App() {
     <Routes>
       <Route path='/' element ={<Homepage/>}/>
       <Route path='/cart' element={<Cart/>}/>
-      <Route path="/Productlist" element={<ProductsPage />} />
+      {/* <Route path="/Productlist" element={<ProductsPage />} /> */}
       <Route path='/Productlist'element={<ProductList/>}/>
       <Route path='/contact'element={<Contact/>}/>
       <Route path='/product/:id' element={<ProductDetails/>}/>
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/Signup" element={<SignUpSection/>} />
+      <Route path="/order-success" element={<OrderSuccess />} />
+     
+
     </Routes>
     <Footer />
     </div>
