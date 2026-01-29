@@ -91,29 +91,6 @@ const transporter = nodemailer.createTransport({
   auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS }
 });
 
-// ===== ROUTES =====
-// 4. REGISTER/LOGIN (JWT)
-// app.post('/api/register', async (req, res) => {
-//   const hashed = await bcrypt.hash(req.body.password, 10);
-//   const user = new User({ email: req.body.email, password: hashed });
-//   await user.save();
-//   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '24h' });
-//   res.json({ token, message: 'User created' });
-// });
-
-// app.post('/api/login', async (req, res) => {
-//   const user = await User.findOne({ email: req.body.email });
-//   if (user && await bcrypt.compare(req.body.password, user.password)) {
-//     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '24h' });
-//     res.cookie('token', token, { httpOnly: true }).json({ token });
-//   } else {
-//     res.status(401).json({ error: 'Invalid credentials' });
-//   }
-// });
-
-// // Protected profile
-// app.get('/api/profile', auth, (req, res) => res.json({ user: req.user }));
-
 // 5. PRODUCTS SEARCH/SORT
 app.get('/api/products', async (req, res) => {
   const { search, sort = 'price', order = 'asc' } = req.query;
