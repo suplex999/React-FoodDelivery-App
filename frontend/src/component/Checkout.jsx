@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { ShopContext } from "./ShopContext"; // Your API-integrated context
 import { toast } from "react-toastify";
-import OrderChat from './OrderChat';
+// import OrderChat from './OrderChat';
 
 function Checkout() {
   const {

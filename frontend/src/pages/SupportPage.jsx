@@ -1,4 +1,4 @@
-import OrderChat from "../component/OrderChat";
+// import OrderChat from "../component/OrderChat";
 const SupportPage = () => {
   return (
     <div className="p-8">
